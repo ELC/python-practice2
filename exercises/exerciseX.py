@@ -39,3 +39,23 @@ if __name__ == "__main__":
     assert sumatoria_reduce(1) == 1
     assert sumatoria_reduce(100) == 5050
 # NO MODIFICAR - FIN
+
+
+###############################################################################
+
+
+def numeros_al_final_sorted(lista: List[Union[float, str]]) -> List[Union[float, str]]:  # noqa: E501
+    """Re-escribir utilizando la función sorted con una custom key.
+
+    Restricciones:
+        - No utilizar bucles.
+        - No utilizar comprensiones.
+        - Utilizar un lambda.
+
+    Referencia: https://docs.python.org/3/library/functions.html#sorted
+    """
+
+
+# NO MODIFICAR - INICIO
+assert numeros_al_final_sorted([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 1, 10]  # noqa: E501
+# NO MODIFICAR - FIN

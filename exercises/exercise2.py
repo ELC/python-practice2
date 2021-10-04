@@ -1,11 +1,11 @@
-"""Comparaciones Encadenadas, Cantidad Arbitraria de Parámetros, Recursividad.
+"""Comparaciones Combinadas, Cantidad Arbitraria de Parámetros, Recursividad.
 """
 
 
 def maximo_encadenado(a: float, b: float, c: float) -> float:
     """Toma 3 números y devuelve el máximo.
 
-    Restricción: Utilizar UNICAMENTE tres IFs y comparaciones encadenadas.
+    Restricción: Utilizar UNICAMENTE dos IFs y comparaciones combinadas.
     Referencia: https://docs.python.org/3/reference/expressions.html#comparisons # noqa: E501
     """
 
