@@ -47,6 +47,7 @@ def combinar_enumerate(nombres: List[str], precios: List[float], ids: List[int])
     Restricción:
         - Utilizar un bucle FOR.
         - No Utilizar la función range.
+        - No Utilizar la función zip.
 
     Referencia: https://docs.python.org/3/library/functions.html#enumerate
     """

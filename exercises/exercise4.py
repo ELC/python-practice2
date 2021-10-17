@@ -6,9 +6,10 @@ def es_vocal_if(letra: str) -> bool:
     no.
 
     Restricciónes:
-        - Utilizar un if para cada posibilidad con la función lower().
-        - No utilizar ELSE
-        - Utilizar 6 returns
+        - Utilizar un if para cada posibilidad.
+        - Utilizar la función lower() sólo una vez.
+        - No utilizar ELSE.
+        - Utilizar 6 returns.
 
     Referencia: https://docs.python.org/3/library/stdtypes.html#string-methods
     """
@@ -18,6 +19,8 @@ def es_vocal_if(letra: str) -> bool:
 assert es_vocal_if("a")
 assert not es_vocal_if("b")
 assert es_vocal_if("A")
+assert es_vocal_if("e")
+assert es_vocal_if("E")
 # NO MODIFICAR - FIN
 
 
@@ -30,7 +33,9 @@ def es_vocal_if_in(letra: str) -> bool:
     Restricciónes:
         - Utilizar un único IF.
         - Utilizar dos returns.
-        - No utilizar else.
+        - No utilizar ELSE.
+        - No utilizar FOR.
+        - No utilizar listas.
 
     Referencia: https://docs.python.org/3/reference/expressions.html#membership-test-operations # noqa: E501
     """
@@ -52,6 +57,8 @@ def es_vocal_in(letra: str) -> bool:
     Restricciónes:
         - No utilizar IF.
         - Utilizar un único return.
+        - No utilizar FOR.
+        - No utilizar listas.
     """
 
 

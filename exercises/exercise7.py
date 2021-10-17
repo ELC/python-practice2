@@ -47,6 +47,7 @@ def superposicion_any(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
 
     Restricciones:
         - No utilizar bucles.
+        - Utilizar una comprensión.
         - La solución debe tener 1 línea.
 
     Referencia: https://docs.python.org/3/library/functions.html#any
@@ -65,6 +66,11 @@ assert not superposicion_any(test_list, (2, "world", 30.85))
 
 def superposicion_set(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
     """Re-Escribir utilizando conjuntos (sets).
+
+    Restricciones:
+        - Resolver sólo utilizando operaciones de conjuntos
+        - No utilizar ANY, ALL, FOR, IF o COMPRENSIONES
+
     Referencia: https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset  # noqa: E501
     """
 

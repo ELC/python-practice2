@@ -7,7 +7,9 @@ def suma_cubo_pares_for(numeros: Iterable[int]) -> int:
     """Toma una lista de números, los eleva al cubo, y devuelve la suma de
     los elementos pares.
 
-    Restricción: Utilizar dos bucles FOR.
+    Restricciones:
+        - Utilizar dos bucles FOR.
+        - No utilizar la función range.
 
     Referencias:
         - https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions # noqa: E501

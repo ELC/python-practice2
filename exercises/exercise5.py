@@ -20,7 +20,7 @@ assert sumatoria_basico(100) == 5050
 def sumatoria_sum(n: int) -> int:
     """Re-Escribir utilizando la función sum.
 
-    Restricci{on: No utilizar bucles
+    Restricción: No utilizar bucles (FOR, WHILE, etc)
     Referencia: https://docs.python.org/3/library/functions.html#sum
     """
 
@@ -38,12 +38,14 @@ from typing import Iterable  # noqa: E402
 
 
 def multiplicar_basico(numeros: Iterable[float]) -> float:
-    """Toma un lista de números y devuelve el producto todos los númreos. Si
+    """Toma un lista de números y devuelve el producto todos los númereos. Si
     la lista está vacia debe devolver 0.
 
     Restricciones:
         - No usar bibliotecas auxiliares (Numpy, math, pandas).
         - Utilizar un bucle FOR
+        - Utilizar múltiples Return
+        - No utilizar ELSE
     """
 
 
