@@ -31,7 +31,7 @@ assert operacion_basica(1, 0, False) == "Operación no válida"
 
 
 def operacion_multiple(a: float, b: float, multiplicar: bool) -> Union[float, str]:  # noqa: E501
-    """Re-Escribir utilizando tres returns.
+    """Re-Escribir el ejercicio anterior utilizando tres returns.
 
     Restricciones:
         - Utilizar 2 IF.

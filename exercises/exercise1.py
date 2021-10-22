@@ -4,7 +4,7 @@
 def maximo_basico(a: float, b: float) -> float:
     """Toma dos números y devuelve el mayor.
 
-    Restricciones: 
+    Restricciones:
         - No utilizar la función max
         - No utilizar ELSE
     """
