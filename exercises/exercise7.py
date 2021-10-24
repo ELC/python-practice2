@@ -69,7 +69,7 @@ def superposicion_set(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
 
     Restricciones:
         - Resolver sólo utilizando operaciones de conjuntos
-        - No utilizar ANY, ALL, FOR, IF o COMPRENSIONES
+        - No utilizar ANY, ALL, FOR, IF ni COMPRENSIONES
 
     Referencia: https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset  # noqa: E501
     """

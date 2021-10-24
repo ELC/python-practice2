@@ -11,6 +11,7 @@ def operacion_basica(a: float, b: float, multiplicar: bool) -> Union[float, str]
 
     Restricciones:
         - Utilizar un único return.
+        - Utilizar IF con ELIF con ELSE.
         - No utilizar AND ni OR.
     """
 
@@ -35,8 +36,9 @@ def operacion_multiple(a: float, b: float, multiplicar: bool) -> Union[float, st
 
     Restricciones:
         - Utilizar 2 IF.
+        - No Utilizar IF anidados.
+        - No utilizar ELIF ni ELSE.
         - No utilizar AND ni OR.
-        - No utilizar ELSE
     """
 
 
