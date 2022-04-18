@@ -4,6 +4,15 @@ from typing import Union
 
 
 def operacion_basica(a: float, b: float, multiplicar: bool) -> Union[float, str]:  # noqa: E501
+
+    if multiplicar:
+        total = a*b
+    elif b == 0:
+        total = "Operación no válida"
+    else:
+        total = a/b
+
+    return total
     """Toma dos números (a, b) y un booleano (multiplicar):
         - Si multiplicar es True: devuelve la multiplicación entre a y b.
         - Si multiplicar es False: devuelve la division entre a y b.
@@ -14,7 +23,6 @@ def operacion_basica(a: float, b: float, multiplicar: bool) -> Union[float, str]
         - Utilizar IF con ELIF con ELSE.
         - No utilizar AND ni OR.
     """
-
 
 # NO MODIFICAR - INICIO
 assert operacion_basica(1, 1, True) == 1
@@ -29,19 +37,26 @@ assert operacion_basica(1, 0, False) == "Operación no válida"
 
 
 ###############################################################################
-
+from typing import Union
 
 def operacion_multiple(a: float, b: float, multiplicar: bool) -> Union[float, str]:  # noqa: E501
-    """Re-Escribir el ejercicio anterior utilizando tres returns.
 
-    Restricciones:
-        - Utilizar 2 IF.
-        - No Utilizar IF anidados.
-        - No utilizar ELIF ni ELSE.
-        - No utilizar AND ni OR.
-    """
+    if multiplicar:
+        return a*b
+    if b == 0:
+        return 'Operacion no válida'
+    
+    return a/b
 
 
+print(operacion_multiple(1, 1, True))
+print(operacion_multiple(1, 1, False))
+print(operacion_multiple(25, 5, True) )
+print(operacion_multiple(25, 5, False))
+print(operacion_multiple(0, 5, True))
+print(operacion_multiple(0, 5, False))
+print(operacion_multiple(1, 0, True))
+print(operacion_multiple(1, 0, False))
 # NO MODIFICAR - INICIO
 assert operacion_multiple(1, 1, True) == 1
 assert operacion_multiple(1, 1, False) == 1
