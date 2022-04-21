@@ -52,8 +52,7 @@ def multiplicar_basico(numeros: Iterable[float]) -> float:
     for i in numeros: x = x  * i
     total = 0 if numeros == [] else x 
     return total
-
-     ¡asi es más optimo!
+    ¡asi es más optimo!
     """ 
     x=1
     if numeros == []:
@@ -63,7 +62,7 @@ def multiplicar_basico(numeros: Iterable[float]) -> float:
         x = x  * i
         
     return x
-   
+    
    
     """Toma un lista de números y devuelve el producto todos los númereos. Si
     la lista está vacia debe devolver 0.

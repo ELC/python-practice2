@@ -83,20 +83,21 @@ test_list = [1, "hello", 35.20]
 
 def superposicion_set(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
 
-    resultado = set(lista_1).intersection(set(lista_2))
-
-    if resultado != []:
-        return True
-
+    resultado = set(lista_1).isdisjoint(set(lista_2))
+    return not resultado
+   
     """Re-Escribir utilizando conjuntos (sets).
-
+    if resultado != {}:
+            return True
     Restricciones:
         - Resolver sólo utilizando operaciones de conjuntos
         - No utilizar ANY, ALL, FOR, IF ni COMPRENSIONES
 
     Referencia: https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset  # noqa: E501
     """
+print(not superposicion_set(test_list, (2, "world", 35.85)))
 print(superposicion_set(test_list, (2, "world", 35.20)))
+
 # NO MODIFICAR - INICIO
 test_list = [1, "hello", 35.20]
 assert superposicion_set(test_list, (2, "world", 35.20))
