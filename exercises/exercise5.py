@@ -45,11 +45,26 @@ assert sumatoria_sum(100) == 5050
 from typing import Iterable  # noqa: E402
 
 
-def multiplicar_basico(numeros: Iterable[float]) -> float:
+def multiplicar_basico(numeros: Iterable[float]) -> float: 
+
+    """
     x=1
     for i in numeros: x = x  * i
     total = 0 if numeros == [] else x 
     return total
+
+     ¡asi es más optimo!
+    """ 
+    x=1
+    if numeros == []:
+        return 0
+
+    for i in numeros: 
+        x = x  * i
+        
+    return x
+   
+   
     """Toma un lista de números y devuelve el producto todos los númereos. Si
     la lista está vacia debe devolver 0.
 
