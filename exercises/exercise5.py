@@ -19,15 +19,16 @@ assert sumatoria_basico(100) == 5050
 
 ###############################################################################
 
-
 def sumatoria_sum(n: int) -> int:
     """Re-Escribir utilizando la función sum.
 
     Restricción: No utilizar bucles (FOR, WHILE, etc)
     Referencia: https://docs.python.org/3/library/functions.html#sum
     """
-    suma=sum(n)
-    return suma
+    lst = list(range(1,n+1))
+    print(lst)
+    Suma = sum(lst,0)
+    return Suma
 # NO MODIFICAR - INICIO
 assert sumatoria_sum(1) == 1
 assert sumatoria_sum(100) == 5050
@@ -37,9 +38,7 @@ assert sumatoria_sum(100) == 5050
 ###############################################################################
 
 
-from typing import Iterable  # noqa: E402
-
-
+from typing import Iterable, List  # noqa: E402
 def multiplicar_basico(numeros: Iterable[float]) -> float:
     """Toma un lista de números y devuelve el producto todos los númereos. Si
     la lista está vacia debe devolver 0.
@@ -50,7 +49,14 @@ def multiplicar_basico(numeros: Iterable[float]) -> float:
         - Utilizar múltiples Return
         - No utilizar ELSE
     """
-
+    print(numeros)
+    if len(numeros) == 0: 
+        return 0
+    acum=1
+    for numero in numeros:
+        acum=numero*acum
+    print(acum)
+    return acum        
 
 # NO MODIFICAR - INICIO
 assert multiplicar_basico([1, 2, 3, 4]) == 24
