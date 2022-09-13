@@ -32,7 +32,7 @@ assert numeros_al_final_basico([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 
 
 
 ###############################################################################
-
+from typing import List, Union
 
 def numeros_al_final_comprension(lista: List[Union[float, str]]) -> List[Union[float, str]]:  # noqa: E501
     """Re-escribir utilizando comprensión de listas.
@@ -42,6 +42,12 @@ def numeros_al_final_comprension(lista: List[Union[float, str]]) -> List[Union[f
         - Utilizar dos comprensiones de listas.
     """
     
+    lista_letras = [i for i in lista if type(i) == str]
+    lista_numeros = [i for i in lista if type(i) == int]
+    numeros_al_final_comprension = []
+    numeros_al_final_comprension.extend(lista_letras)
+    numeros_al_final_comprension.extend(lista_numeros)
+    print(numeros_al_final_comprension) #Me esta tirando la salida que pide el ejercicio pero el assert me da error
 
 # NO MODIFICAR - INICIO
 assert numeros_al_final_comprension([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 1, 10]  # noqa: E501
