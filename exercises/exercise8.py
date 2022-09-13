@@ -7,6 +7,7 @@ los objetos de la capa de negocio.
 """
 
 
+from operator import iadd, iand
 from typing import Any, List, Tuple
 
 nombre_articulos = ["ventana", "lámpara", "shampoo"]
@@ -25,11 +26,18 @@ def combinar_basico(nombres: List[str], precios: List[float]) -> Tuple[Any]:
 
 
 # NO MODIFICAR - INICIO
+    lista_de_listas = []
+    for i in range(3):
+        lista = [nombres[i], precios[i]]
+        lista_de_listas.append(tuple(lista))
+    tupla = tuple(lista_de_listas)
+    return tupla
 respuesta = (
-    ("ventana", 100.48),
-    ("lámpara", 16.42),
-    ("shampoo", 5.2),
+("ventana", 100.48),
+("lámpara", 16.42),
+("shampoo", 5.2),
 )
+
 
 assert combinar_basico(nombre_articulos, precio_articulos) == respuesta
 # NO MODIFICAR - FIN
@@ -54,6 +62,14 @@ def combinar_enumerate(nombres: List[str], precios: List[float], ids: List[int])
 
 
 # NO MODIFICAR - INICIO
+    lista_1=[]
+    for i, nombres in enumerate(nombres):
+        lista = [nombres, precios[i], ids[i]]
+        lista_1.append(tuple(lista))
+    tupla = tuple(lista_1)
+    return tupla
+
+
 respuesta = (
     ("ventana", 100.48, 6852),
     ("lámpara", 16.42, 1459),
@@ -83,6 +99,15 @@ def combinar_zip(nombres: List[str], precios: List[float], ids: List[int]) -> Tu
 
 
 # NO MODIFICAR - INICIO
+    variable = []
+    lista3=[]
+    for nombres, precios, ids in zip(nombres, precios, ids):
+        variable = [nombres, precios, ids]
+        lista3.append(tuple(variable))
+
+    lista3 = tuple(respuesta)
+    return lista3
+
 respuesta = (
     ("ventana", 100.48, 6852),
     ("lámpara", 16.42, 1459),
@@ -115,6 +140,13 @@ def combinar_zip_args(*args) -> Tuple[Any]:
 
 
 # NO MODIFICAR - INICIO
+    lista_ultima = []
+    for i in zip(*args):
+        lista_ultima.append(i)
+
+    respuesta = tuple(lista_ultima)
+    return respuesta  
+
 respuesta = (
     ("ventana", 100.48, 6852, "hogar", True),
     ("lámpara", 16.42, 1459, "libreria", False),
