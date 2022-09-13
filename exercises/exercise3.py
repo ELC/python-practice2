@@ -1,6 +1,7 @@
 """Único return vs múltiples return."""
 
 from typing import Union
+from unittest import result
 
 
 def operacion_basica(a: float, b: float, multiplicar: bool) -> Union[float, str]:  # noqa: E501
@@ -17,6 +18,16 @@ def operacion_basica(a: float, b: float, multiplicar: bool) -> Union[float, str]
 
 
 # NO MODIFICAR - INICIO
+
+if multiplicar:
+        result = a*b
+    elif b!=0:
+        result = a/b
+    else:
+        result = "Operación no válida"
+    return result
+
+
 assert operacion_basica(1, 1, True) == 1
 assert operacion_basica(1, 1, False) == 1
 assert operacion_basica(25, 5, True) == 125
@@ -43,6 +54,13 @@ def operacion_multiple(a: float, b: float, multiplicar: bool) -> Union[float, st
 
 
 # NO MODIFICAR - INICIO
+
+if not multiplicar:
+        if b == 0:
+            return "Operación no válida"
+        return a/b
+    return a*b
+
 assert operacion_multiple(1, 1, True) == 1
 assert operacion_multiple(1, 1, False) == 1
 assert operacion_multiple(25, 5, True) == 125

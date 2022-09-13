@@ -9,6 +9,12 @@ def sumatoria_basico(n: int) -> int:
 
 
 # NO MODIFICAR - INICIO
+    suma=0   
+    for i in range(n+1):
+        suma=suma+i
+    return suma
+
+
 assert sumatoria_basico(1) == 1
 assert sumatoria_basico(100) == 5050
 # NO MODIFICAR - FIN
@@ -26,6 +32,10 @@ def sumatoria_sum(n: int) -> int:
 
 
 # NO MODIFICAR - INICIO
+
+    retorno=sum(range(n+1), start=0)
+    return retorno
+
 assert sumatoria_sum(1) == 1
 assert sumatoria_sum(100) == 5050
 # NO MODIFICAR - FIN
@@ -50,6 +60,14 @@ def multiplicar_basico(numeros: Iterable[float]) -> float:
 
 
 # NO MODIFICAR - INICIO
+
+    resultado=1
+    if len(numeros)==0:
+        return 0
+    for i in numeros:
+        resultado=resultado*i
+    return resultado
+
 assert multiplicar_basico([1, 2, 3, 4]) == 24
 assert multiplicar_basico([2, 5]) == 10
 assert multiplicar_basico([]) == 0

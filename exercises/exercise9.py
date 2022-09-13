@@ -18,6 +18,10 @@ def suma_cubo_pares_for(numeros: Iterable[int]) -> int:
 
 
 # NO MODIFICAR - INICIO
+    num=[i for i in numeros if i % 2 == 0 ]
+    resultado=[i**3 for i in num ]
+    resultado=sum(resultado)
+    return resultado
 assert suma_cubo_pares_for([1, 2, 3, 4, 5, 6]) == 288
 # NO MODIFICAR - FIN
 
@@ -36,6 +40,9 @@ def suma_cubo_pares_sum_list(numeros: Iterable[int]) -> int:
 
 
 # NO MODIFICAR - INICIO
+    resultado = [x**3 for x in numeros if x%2==0]
+    resultado=sum(resultado)
+    return resultado
 assert suma_cubo_pares_sum_list([1, 2, 3, 4, 5, 6]) == 288
 # NO MODIFICAR - FIN
 
@@ -75,6 +82,9 @@ suma_numeros_al_cubo_pares =  # Completar
 
 
 # NO MODIFICAR - INICIO
+numeros_al_cubo =  list(map(lambda x : x ** 3, numeros))
+numeros_al_cubo_pares = list(filter(lambda x : x % 2 == 0, numeros_al_cubo))
+suma_numeros_al_cubo_pares = reduce(lambda x, y: x + y, numeros_al_cubo_pares)
 assert numeros_al_cubo == [1, 8, 27, 64, 125, 216]
 assert numeros_al_cubo_pares == [8, 64, 216]
 assert suma_numeros_al_cubo_pares == 288
