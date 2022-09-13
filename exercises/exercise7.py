@@ -14,7 +14,13 @@ def superposicion_basico(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool
 
 
 # NO MODIFICAR - INICIO
-test_list = [1, "hello", 35.20]
+
+    for elemento in lista_1:
+        for elemento2 in lista_2:
+            if elemento == elemento2:
+                return True
+    return False
+
 assert superposicion_basico(test_list, (2, "world", 35.20))
 assert not superposicion_basico(test_list, (2, "world", 30.85))
 # NO MODIFICAR - FIN
@@ -33,7 +39,13 @@ def superposicion_in(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
 
 
 # NO MODIFICAR - INICIO
-test_list = [1, "hello", 35.20]
+
+    for elemento in lista_1:
+        if elemento in lista_2:
+         return True
+         return False
+
+    test_list = [1, "hello", 35.20]
 assert superposicion_in(test_list, (2, "world", 35.20))
 assert not superposicion_in(test_list, (2, "world", 30.85))
 # NO MODIFICAR - FIN
