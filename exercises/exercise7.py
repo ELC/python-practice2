@@ -11,7 +11,11 @@ def superposicion_basico(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool
         - Utilizar dos bucles FOR anidados.
         - Utilizar dos returns.
     """
-
+    for n in lista_1:
+        for i in lista_2:
+            if n == i:
+                return True
+    return False
 
 # NO MODIFICAR - INICIO
 test_list = [1, "hello", 35.20]
@@ -30,8 +34,10 @@ def superposicion_in(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
         - Utilizar un único bucle FOR.
         - Utilizar dos returns.
     """
-
-
+    for i in lista_1:
+        if i in lista_2:
+            return True
+    return False
 # NO MODIFICAR - INICIO
 test_list = [1, "hello", 35.20]
 assert superposicion_in(test_list, (2, "world", 35.20))
@@ -52,8 +58,7 @@ def superposicion_any(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
 
     Referencia: https://docs.python.org/3/library/functions.html#any
     """
-
-
+    return any ( i in lista_1 for i in lista_2)
 # NO MODIFICAR - INICIO
 test_list = [1, "hello", 35.20]
 assert superposicion_any(test_list, (2, "world", 35.20))
@@ -73,7 +78,9 @@ def superposicion_set(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
 
     Referencia: https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset  # noqa: E501
     """
-
+    a = set(lista_1)
+    b = set(lista_2)
+    return bool (a.intersection(b))
 
 # NO MODIFICAR - INICIO
 test_list = [1, "hello", 35.20]

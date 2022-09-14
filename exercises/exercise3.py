@@ -8,14 +8,19 @@ def operacion_basica(a: float, b: float, multiplicar: bool) -> Union[float, str]
         - Si multiplicar es True: devuelve la multiplicación entre a y b.
         - Si multiplicar es False: devuelve la division entre a y b.
         - Si multiplicar es False y b es cero: devuelve "Operación no válida".
-
     Restricciones:
         - Utilizar un único return.
         - Utilizar IF con ELIF con ELSE.
         - No utilizar AND ni OR.
     """
-
-
+    var=0
+    if multiplicar == True: 
+        var=a*b
+    elif b==0:
+        var="Operación no válida"
+    else:
+        var=a/b
+    return var
 # NO MODIFICAR - INICIO
 assert operacion_basica(1, 1, True) == 1
 assert operacion_basica(1, 1, False) == 1
@@ -40,6 +45,13 @@ def operacion_multiple(a: float, b: float, multiplicar: bool) -> Union[float, st
         - No utilizar ELIF ni ELSE.
         - No utilizar AND ni OR.
     """
+    if multiplicar == True: 
+        return a*b
+    elif b==0:
+        return "Operación no válida"
+    else:
+        return a/b
+
 
 
 # NO MODIFICAR - INICIO
