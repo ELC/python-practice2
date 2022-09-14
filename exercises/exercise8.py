@@ -80,7 +80,8 @@ def combinar_zip(nombres: List[str], precios: List[float], ids: List[int]) -> Tu
         - No utilizar índices.
     Referencia: https://docs.python.org/3/library/functions.html#zip
     """
-
+    respuesta = tuple(zip(nombre_articulos, precio_articulos, id_articulos))
+    return respuesta
 
 # NO MODIFICAR - INICIO
 respuesta = (
@@ -112,6 +113,8 @@ def combinar_zip_args(*args) -> Tuple[Any]:
 
     Referencia: https://docs.python.org/3/tutorial/controlflow.html#unpacking-argument-lists  # noqa: E501
     """
+    respuesta = tuple(zip(nombre_articulos, precio_articulos, id_articulos, categoria_articulos, importado_articulos))
+    return respuesta    
 
 
 # NO MODIFICAR - INICIO

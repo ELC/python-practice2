@@ -52,6 +52,7 @@ def superposicion_any(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
 
     Referencia: https://docs.python.org/3/library/functions.html#any
     """
+    return any(check in lista_2 for check in lista_1)
 
 
 # NO MODIFICAR - INICIO
@@ -73,8 +74,7 @@ def superposicion_set(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
 
     Referencia: https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset  # noqa: E501
     """
-
-
+    return set(lista_2) & set(lista_1)
 # NO MODIFICAR - INICIO
 test_list = [1, "hello", 35.20]
 assert superposicion_set(test_list, (2, "world", 35.20))
