@@ -7,6 +7,11 @@ def sumatoria_basico(n: int) -> int:
     Restricción: Utilizar un bucle FOR.
     """
 
+    resultado=0
+    for i in range (n+1):
+         resultado=resultado+i
+    return resultado 
+
 
 # NO MODIFICAR - INICIO
 assert sumatoria_basico(1) == 1
@@ -23,6 +28,8 @@ def sumatoria_sum(n: int) -> int:
     Restricción: No utilizar bucles (FOR, WHILE, etc)
     Referencia: https://docs.python.org/3/library/functions.html#sum
     """
+
+    return sum(range(n+1))
 
 
 # NO MODIFICAR - INICIO
@@ -47,6 +54,13 @@ def multiplicar_basico(numeros: Iterable[float]) -> float:
         - Utilizar múltiples Return
         - No utilizar ELSE
     """
+
+    if (len(numeros)==0):
+        return 0
+    total = 1
+    for i in numeros:
+        total = total * i
+    return total
 
 
 # NO MODIFICAR - INICIO

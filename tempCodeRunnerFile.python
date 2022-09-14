@@ -1,0 +1,24 @@
+from typing import Iterable
+
+
+def suma_cubo_pares_for(numeros: Iterable[int]) -> int:
+    """Toma una lista de números, los eleva al cubo, y devuelve la suma de
+    los elementos pares.
+
+    Restricciones:
+        - Utilizar dos bucles FOR.
+        - No utilizar la función range.
+
+    Referencias:
+        - https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions # noqa: E501
+        - https://docs.python.org/3/library/functions.html#sum
+    """
+
+    suma=0
+    num_cubo= []
+    for x in numeros:
+        num_cubo.append(x**3)
+    for x in num_cubo:
+        if (x%2)==0:                      
+            suma=suma+x
+    return suma
