@@ -12,6 +12,16 @@ def numeros_al_final_basico(lista: List[Union[float, str]]) -> List[Union[float,
         - Utilizar la función type.
         - No utilizar índices.
     """
+    listaEnteros = []
+    listaStrings = []
+
+    for i in lista:
+        if type(i) == int:
+            listaEnteros.append(i)
+        else:
+            listaStrings.append(i)
+    listaStrings.extend(listaEnteros)
+    return listaStrings
 
 
 # NO MODIFICAR - INICIO
@@ -29,6 +39,11 @@ def numeros_al_final_comprension(lista: List[Union[float, str]]) -> List[Union[f
         - No utilizar bucles.
         - Utilizar dos comprensiones de listas.
     """
+    numbers = [n for n in lista if type(n) is int]
+    strings = [s for s in lista if type(s) is str]
+
+    strings.extend(numbers)
+    return strings
 
 
 # NO MODIFICAR - INICIO
