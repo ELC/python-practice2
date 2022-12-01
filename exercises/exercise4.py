@@ -13,6 +13,30 @@ def es_vocal_if(letra: str) -> bool:
 
     Referencia: https://docs.python.org/3/library/stdtypes.html#string-methods
     """
+    vocales_list = "AEIOUaeiou"
+
+    if letra == "a":
+        return True
+    if letra == "e":
+        return True
+    if letra == "i":
+        return True
+    if letra == "o":
+        return True
+    if letra == "u":
+        return True
+    if letra == "A":
+        return True
+    if letra == "E":
+        return True
+    if letra == "I":
+        return True
+    if letra == "O":
+        return True
+    if letra == "U":
+        return True
+
+    return False
 
 
 # NO MODIFICAR - INICIO
@@ -39,6 +63,12 @@ def es_vocal_if_in(letra: str) -> bool:
 
     Referencia: https://docs.python.org/3/reference/expressions.html#membership-test-operations # noqa: E501
     """
+    vocales_list = "AEIOUaeiou"
+
+    if letra in vocales_list:
+        return True
+
+    return False 
 
 
 # NO MODIFICAR - INICIO
@@ -60,6 +90,9 @@ def es_vocal_in(letra: str) -> bool:
         - No utilizar FOR.
         - No utilizar listas.
     """
+    vocales_list = "AEIOUaeiou"
+
+    return letra in vocales_list
 
 
 # NO MODIFICAR - INICIO
